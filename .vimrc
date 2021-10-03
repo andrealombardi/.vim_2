@@ -26,6 +26,10 @@ Plugin 'ryanoasis/vim-devicons'
 call vundle#end()
 
 
+"enable syntax and plugins (for netrw)
+syntax enable
+filetype plugin indent on
+
 
 set clipboard=unnamed
 set encoding=UTF-8
@@ -33,36 +37,19 @@ set ignorecase              "Use case insensitive search
 set smartcase               "Except when using capital letters
 set incsearch               "Set incremental search
 set hlsearch                "Highlight search
+set noswapfile              "Don't use swapfile
+set nobackup		    "Don't create backup files
+set nowritebackup 
 set autoread                "Automatically reread changed files without asking 
 "set number                  "Show line number
-
-
-"BASIC SET UP:
-
-
-"enable syntax and plugins (for netrw)
-syntax enable
-filetype plugin indent on
-
 
 "FINDING FILES:
 
 "Search down into subfolders
 "Provided tab-completion for all file-related tasks
 set path+=**
-
-
 "Display all matching files when we tab complete
 set wildmenu
-
-
-"NOW WE CAN:
-" - Hit the tab fo :find by partial match
-" - Use * to make it fuzzy
-
-"AUTOCOMPLETE:
-"The good stuff is documented in |ins-completion|
-
 
 "Do not recognize octal numbers for Ctrl-A and Ctrl-X, most users find it confusing.
 set nrformats-=octal
@@ -76,6 +63,8 @@ set laststatus=2
 "USE SNIPPETS:
 "below an example
 "nnoremap ,java :read $HOME/hello.txt<CR>
+
+
 
 "---------- Mappings -------------------------------
 
